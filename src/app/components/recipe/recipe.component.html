@@ -1,0 +1,29 @@
+<!-- <div class="recipe">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-button-save (onClick)="onSave($event)"></app-button-save>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-recipe-list 
+        *ngFor="let recipe of recipes"
+        [recipe]=recipe></app-recipe-list>
+    </div>
+  </div>
+</div> -->
+
+<div class="recipe">
+  <div class="row">
+    <div class="col-xs-5">
+      <app-recipe-list [recipes]="recipes" (onSave)="onSave($event)" (onSelect)="onSelect($event)"></app-recipe-list>
+    </div>
+    <div class="col-xs-7">
+        <app-recipe-details [selectedRecipe]="selectedRecipe" (onSave)="onSave($event)"></app-recipe-details>
+      </div>
+  </div>
+</div>
+
+<p appBasicHilight>Basic Hilight</p>
+<p appBetterHilight>Better Hilight</p>

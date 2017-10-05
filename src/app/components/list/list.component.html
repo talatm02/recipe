@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    {{heading}}
+    <app-button-save (onClick)="onSaveClick($event)" [label]="label" class="pull-right" style=""></app-button-save>
+  </div>
+  <!-- <div class="panel-body">
+    
+  </div> -->
+
+  <!-- Table -->
+  <table class="table table-condensed">
+      <ng-content></ng-content>
+  </table>
+</div>
